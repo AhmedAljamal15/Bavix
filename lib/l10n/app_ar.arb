@@ -1,0 +1,508 @@
+{
+  "@@locale": "ar",
+  "appTitle": "تطبيق مبيعات ERP",
+  "profile": "الملف الشخصي",
+  "logout": "تسجيل الخروج",
+  "customers": "العملاء",
+  "items": "المنتجات",
+  "salesOrders": "أوامر البيع",
+  "salesInvoices": "فواتير المبيعات",
+  "deliveryNotes": "أذون التسليم",
+  "createAccount": "إنشاء حساب",
+  "requestAccess": "طلب وصول",
+  "signIn": "تسجيل الدخول",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "fullName": "الاسم الكامل",
+  "userType": "نوع المستخدم",
+  "roles": "الأدوار",
+  "appearance": "المظهر",
+  "language": "اللغة",
+  "lightMode": "الوضع الفاتح",
+  "darkMode": "الوضع الداكن",
+  "followSystem": "اتباع النظام",
+  "adminDashboard": "لوحة تحكم المدير",
+  "salesDashboard": "لوحة تحكم المبيعات",
+  "customerDashboard": "لوحة تحكم العميل",
+  "hrDashboard": "لوحة تحكم الموارد البشرية",
+  "accountInformation": "معلومات الحساب",
+  "appSettings": "إعدادات التطبيق",
+  "noCustomersFound": "لا يوجد عملاء",
+  "noItemsFound": "لا توجد منتجات",
+  "noSalesInvoicesFound": "لا توجد فواتير مبيعات",
+  "noDeliveryNotesFound": "لا توجد أذون تسليم",
+  "noOrdersFound": "لا توجد طلبات",
+  "erpSalesDashboard": "لوحة تحكم مبيعات ERP",
+  "welcomeBack": "أهلا وسهلا",
+  "signInToContinue": "قم بتسجيل الدخول للمتابعة إلى نظام ERP الخاص بك",
+  "requestAccessButton": "طلب وصول",
+  "createCustomerAccount": "إنشاء حساب عميل",
+  "welcomeToYourErp": "مرحبا بك في نظام ERP الخاص بك",
+  "manageYourSalesEfficiently": "قم بإدارة عمليات المبيعات الخاصة بك بكفاءة. تتبع المنتجات والعملاء والطلبات والفواتير في مكان واحد.",
+  "manageItems": "إدارة المنتجات",
+  "trackProductsAndInventory": "تتبع المنتجات والمخزون",
+  "manageCustomers": "إدارة العملاء",
+  "organizeClientInformation": "تنظيم معلومات العميل",
+  "trackOrders": "تتبع الطلبات",
+  "monitorSalesAndDelivery": "مراقبة المبيعات والتسليم",
+  "getStarted": "ابدأ الآن",
+  "allRoles": "جميع الأدوار",
+  "basicAccess": "الوصول الأساسي",
+  "viewAllRoles": "عرض جميع الأدوار",
+  "chooseAppearance": "اختر المظهر",
+  "english": "English",
+  "arabic": "العربية",
+  "noUsersFound": "لم يتم العثور على مستخدمين",
+  "adminDashboardTitle": "لوحة تحكم المدير",
+  "controlCenter": "مركز التحكم",
+  "monitorUsersCustomersProductsOrdersInvoicesAndDeliveries": "مراقبة المستخدمين والعملاء والمنتجات والطلبات والفواتير والتسليمات",
+  "users": "المستخدمون",
+  "userOverview": "نظرة عامة على المستخدمين",
+  "enabledUsers": "المستخدمون المفعلون",
+  "systemUsers": "مستخدمو النظام",
+  "websiteUsers": "مستخدمو الموقع",
+  "businessSnapshot": "لمحة عن الأعمال",
+  "totalInvoiceValue": "إجمالي قيمة الفاتورة",
+  "quickAccess": "الوصول السريع",
+  "salesDashboardTitle": "لوحة تحكم المبيعات",
+  "salesOperations": "عمليات المبيعات",
+  "manageCustomersProductsOrdersDeliveriesAndInvoices": "إدارة العملاء والمنتجات والطلبات والتسليمات والفواتير",
+  "productCatalog": "كتالوج المنتجات",
+  "clientDirectory": "دليل العميل",
+  "orderManagement": "إدارة الطلبات",
+  "shipmentTracking": "تتبع الشحنة",
+  "hrDashboardTitle": "لوحة تحكم الموارد البشرية",
+  "humanResources": "الموارد البشرية",
+  "manageUserAccessAndReviewWorkforceAccounts": "إدارة وصول المستخدمين ومراجعة حسابات القوى العاملة",
+  "totalUsers": "إجمالي المستخدمين",
+  "enabled": "مفعل",
+  "recentUsers": "المستخدمون الأخيرون",
+  "customerDashboardTitle": "لوحة تحكم العميل",
+  "welcomeUser": "مرحبا، {name}",
+  "@welcomeUser": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "noLinkedCustomerProfileFound": "لم يتم العثور على ملف تعريف عميل مرتبط بهذا الحساب",
+  "trackYourOrdersInvoicesAndDeliveries": "تتبع طلباتك وفواتيرك وتسليماتك",
+  "recentOrders": "الطلبات الأخيرة",
+  "recentInvoices": "الفواتير الأخيرة",
+  "recentDeliveryNotes": "أذون التسليم الأخيرة",
+  "login": "تسجيل الدخول",
+  "addCustomer": "إضافة عميل",
+  "add": "إضافة",
+  "type": "النوع",
+  "group": "المجموعة",
+  "territory": "الإقليم",
+  "notSet": "غير محدد",
+  "accountInformationSection": "معلومات الحساب",
+  "appSettingsSection": "إعدادات التطبيق",
+  "createCustomerAccountTitle": "إنشاء حساب عميل",
+  "customerName": "اسم العميل",
+  "enterCustomerName": "أدخل اسم العميل",
+  "enterCustomerEmail": "أدخل بريد العميل الإلكتروني",
+  "customerType": "نوع العميل",
+  "individual": "فرد",
+  "company": "الشركة",
+  "createCustomerButton": "إنشاء عميل",
+  "customerCreatedSuccessfully": "تم إنشاء العميل بنجاح!",
+  "customerNameIsRequired": "اسم العميل مطلوب",
+  "customerNameMustBeAtLeast2Characters": "يجب أن يكون اسم العميل 2 أحرف على الأقل",
+  "emailIsRequired": "البريد الإلكتروني مطلوب",
+  "enterValidEmail": "أدخل بريدا إلكترونيا صحيحا",
+  "errorInitializingApp": "خطأ في تهيئة التطبيق: {error}",
+  "@errorInitializingApp": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "itemCode": "رمز الصنف",
+  "enterItemCode": "أدخل رمز المنتج",
+  "itemName": "اسم المنتج",
+  "enterItemName": "أدخل اسم المنتج",
+  "itemGroup": "مجموعة المنتج",
+  "enterItemGroup": "أدخل مجموعة المنتج",
+  "stockUom": "وحدة مخزن المنتج",
+  "enterStockUom": "أدخل وحدة مخزن المنتج",
+  "countryOfOrigin": "بلد المنشأ",
+  "enterCountryOfOrigin": "أدخل بلد المنشأ",
+  "isStockItem": "منتج مخزن",
+  "isSalesItem": "منتج البيع",
+  "createItem": "إنشاء منتج",
+  "itemCreatedSuccessfully": "تم إنشاء المنتج بنجاح!",
+  "fieldIsRequired": "{label} مطلوب",
+  "@fieldIsRequired": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "fieldMustBeAtLeast2Characters": "{label} يجب أن يكون 2 أحرف على الأقل",
+  "@fieldMustBeAtLeast2Characters": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "itemDetailsTitle": "تفاصيل المنتج",
+  "basicInformation": "المعلومات الأساسية",
+  "pricingAndRates": "الأسعار والأسعار",
+  "statusAndFlags": "الحالة والعلامات",
+  "standardRate": "السعر القياسي",
+  "yes": "نعم",
+  "no": "لا",
+  "salesItem": "منتج البيع",
+  "status": "الحالة",
+  "active": "نشط",
+  "disabled": "معطل",
+  "addItem": "إضافة منتج",
+  "createStockEntry": "إنشاء إدخال مخزون",
+  "uom": "وحدة القياس",
+  "rate": "السعر",
+  "stockItem": "منتج مخزن",
+  "notStockItem": "ليس منتج مخزن",
+  "notSalesItem": "ليس منتج بيع",
+  "code": "الرمز",
+  "createItemTitle": "إنشاء منتج",
+  "createStockEntryTitle": "إنشاء إدخال مخزن",
+  "item": "المنتج",
+  "targetWarehouse": "المستودع المستهدف",
+  "quantity": "الكمية",
+  "basicRate": "السعر الأساسي",
+  "createStockEntryButton": "إنشاء إدخال مخزن",
+  "pleaseSelectAnItem": "يرجى تحديد منتج",
+  "pleaseSelectAWarehouse": "يرجى تحديد مستودع",
+  "pleaseEnterValidQuantity": "يرجى إدخال كمية صحيحة",
+  "pleaseEnterValidBasicRate": "يرجى إدخال سعر أساسي صحيح",
+  "stockEntrySubmitted": "تم تقديم إدخال المخزن: {name}",
+  "@stockEntrySubmitted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "salesOrdersTitle": "أوامر البيع",
+  "orderItems": "عناصر الطلب",
+  "customer": "عميل",
+  "@customer": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "date": "التاريخ: {date}",
+  "@date": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "delivery": "التسليم: {date}",
+  "@delivery": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "total": "الإجمالي: {amount}",
+  "@total": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "draft": "مسودة",
+  "submitted": "مرسل",
+  "completed": "مكتمل",
+  "cancelled": "ملغاة",
+  "orderDetailsTitle": "تفاصيل الطلب",
+  "deliveryDate": "تاريخ التسليم",
+  "currency": "العملة",
+  "orderSummary": "ملخص الطلب",
+  "totalQty": "إجمالي الكمية",
+  "grandTotal": "الإجمالي العام",
+  "billingStatus": "حالة الفواتير",
+  "deliveryStatus": "حالة التسليم",
+  "createDeliveryNote": "إنشاء إذن تسليم",
+  "viewSalesInvoice": "عرض فاتورة المبيعات",
+  "submitDeliveryNote": "تقديم: {name}",
+  "@submitDeliveryNote": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryNoteDraftCreated": "تم إنشاء مسودة إذن التسليم: {name}",
+  "@deliveryNoteDraftCreated": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryNoteSubmittedSuccessfully": "تم تقديم إذن التسليم بنجاح",
+  "salesInvoicesTitle": "فواتير المبيعات",
+  "postingDate": "تاريخ الترحيل: {date}",
+  "@postingDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "grandTotalAmount": "الإجمالي العام: {amount} {currency}",
+  "@grandTotalAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "paid": "مدفوع",
+  "unpaid": "غير مدفوع",
+  "overdue": "متأخر",
+  "invoiceTitle": "الفاتورة - {orderId}",
+  "@invoiceTitle": {
+    "placeholders": {
+      "orderId": {
+        "type": "String"
+      }
+    }
+  },
+  "invoiceDetailsTitle": "تفاصيل الفاتورة",
+  "invoiceItems": "عناصر الفاتورة",
+  "noItemsFoundInInvoice": "لم يتم العثور على عناصر",
+  "invoiceCustomer": "العميل: {name}",
+  "@invoiceCustomer": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "invoiceStatus": "الحالة: {status}",
+  "@invoiceStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "invoiceCompany": "الشركة: {name}",
+  "@invoiceCompany": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "invoiceCurrency": "العملة: {currency}",
+  "@invoiceCurrency": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "invoiceTotalQty": "إجمالي الكمية: {qty}",
+  "@invoiceTotalQty": {
+    "placeholders": {
+      "qty": {
+        "type": "int"
+      }
+    }
+  },
+  "invoiceGrandTotal": "الإجمالي العام: {amount}",
+  "@invoiceGrandTotal": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryNotesTitle": "أذون التسليم",
+  "deliveryNoteItems": "العناصر",
+  "deliveryNoteStatus": "الحالة: {status}",
+  "@deliveryNoteStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "toBill": "للفاتورة",
+  "registrationSuccessful": "تم إنشاء الحساب بنجاح. يرجى التحقق من بريدك الإلكتروني لإكمال التسجيل وتعيين كلمة المرور الخاصة بك.",
+  "fullNameIsRequired": "الاسم الكامل مطلوب",
+  "enterValidFullName": "أدخل اسما كاملا صحيحا",
+  "passwordIsRequired": "كلمة المرور مطلوبة",
+  "passwordMustBeAtLeast6Characters": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+  "pleaseConfirmPassword": "يرجى تأكيد كلمة المرور",
+  "passwordsDoNotMatch": "كلمات المرور غير متطابقة",
+  "afterRegistrationCheckYourEmailToCompleteAccountSetup": "بعد التسجيل، تحقق من بريدك الإلكتروني لإكمال إعداد الحساب.",
+  "requestAccessTitle": "طلب وصول",
+  "requestedRole": "الدور المطلوب",
+  "whyDoYouNeedAccess": "لماذا تحتاج إلى الوصول؟",
+  "submitRequest": "تقديم الطلب",
+  "accessRequestSubmitted": "تم تقديم طلب الوصول: {leadName}",
+  "@accessRequestSubmitted": {
+    "placeholders": {
+      "leadName": {
+        "type": "String"
+      }
+    }
+  },
+  "hrPanel": "لوحة الموارد البشرية",
+  "salesPanel": "لوحة المبيعات",
+  "orders": "الطلبات",
+  "invoices": "الفواتير",
+  "customerLabel": "العميل",
+  "ordersLabel": "الطلبات",
+  "noRecentOrders": "لا توجد طلبات",
+  "noRecentInvoices": "لا توجد فواتير",
+  "noRecentDeliveryNotes": "لا توجد إشعارات تسليم",
+  "orderControlCenter": "مركز التحكم بالطلبات",
+  "trackOrdersDescription": "تتبع طلبات العملاء وتواريخ التسليم والإجماليات وحالة المستندات.",
+  "ordersLoaded": "تم تحميل {count} طلب",
+  "@ordersLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noSalesOrdersFound": "لا توجد أوامر بيع",
+  "salesOrdersWillAppearHere": "ستظهر أوامر البيع هنا بعد إنشائها.",
+  "noMatchingOrders": "لا توجد طلبات مطابقة",
+  "trySearchingOrders": "حاول البحث بطلب آخر أو عميل أو حالة.",
+  "searchOrders": "ابحث في الطلبات...",
+  "totalLabel": "الإجمالي",
+  "productControlCenter": "مركز التحكم بالمنتجات",
+  "manageProductCatalogDescription": "إدارة كتالوج المنتجات والمنتجات المخزنة والأسعار وتوفر المبيعات.",
+  "itemsLoaded": "تم تحميل {count} منتج",
+  "@itemsLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noMatchingItems": "لا توجد منتجات مطابقة",
+  "trySearchingItems": "حاول البحث باسم منتج آخر أو رمز أو مجموعة أو وحدة قياس.",
+  "createFirstItem": "أنشئ منتجك الأول لبدء إدارة المنتجات.",
+  "searchItems": "ابحث في المنتجات...",
+  "groupLabel": "المجموعة",
+  "rateLabel": "السعر",
+  "typeLabel": "النوع",
+  "stockLabel": "مخزن",
+  "nonStock": "غير مخزن",
+  "notStock": "ليس مخزناً",
+  "notSales": "ليس للبيع",
+  "inventoryDashboard": "لوحة المخزون",
+  "stockControlCenter": "مركز التحكم بالمخزون",
+  "trackInventoryDescription": "تتبع المنتجات والمستودعات وحركات المخزون في مكان واحد.",
+  "warehouses": "المستودعات",
+  "lowStock": "مخزون منخفض",
+  "outOfStock": "نفاد المخزون",
+  "quickActions": "إجراءات سريعة",
+  "createItemAction": "إنشاء منتج",
+  "addNewProduct": "إضافة منتج جديد",
+  "stockEntryAction": "إدخال مخزن",
+  "receiveIssueStock": "استلام / إصدار مخزن",
+  "itemsList": "قائمة المنتجات",
+  "openProducts": "فتح المنتجات",
+  "stockByWarehouse": "المخزون حسب المستودع",
+  "totalQuantity": "الكمية الإجمالية",
+  "noWarehouseStockFound": "لا توجد بيانات مخزون للمستودع",
+  "lowStockItems": "منتجات منخفضة المخزون",
+  "noLowStockFound": "لا توجد منتجات منخفضة المخزون",
+  "recentStockMovements": "حركات المخزون الأخيرة",
+  "noStockMovementsFound": "لا توجد حركات مخزون",
+  "attendance": "الحضور والانصراف",
+  "attendanceManagement": "إدارة الحضور",
+  "trackAttendanceDescription": "تتبع حضور الموظفين اليومي والغياب وأنصاف الأيام وحالة الإجازات.",
+  "attendanceRecordsLoaded": "تم تحميل {count} سجل حضور",
+  "@attendanceRecordsLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "newAttendance": "حضور جديد",
+  "present": "حاضر",
+  "absent": "غائب",
+  "halfDay": "نصف يوم",
+  "onLeave": "في إجازة",
+  "searchAttendance": "ابحث في الحضور...",
+  "noAttendanceFound": "لا توجد سجلات حضور",
+  "createAttendanceOrFilter": "أنشئ سجل حضور جديد أو غيّر الفلتر.",
+  "employee": "موظف",
+  "retry": "إعادة المحاولة",
+  "payroll": "الرواتب",
+  "payrollManagement": "إدارة الرواتب",
+  "trackPayrollDescription": "تتبع قسائم الراتب وإدخالات كشف الرواتب من ERPNext.",
+  "salarySlips": "قسائم الراتب",
+  "payrollEntries": "إدخالات الرواتب",
+  "newEntry": "إدخال جديد",
+  "noSalarySlipsYet": "لا توجد قسائم راتب بعد",
+  "salarySlipsAppearAutomatically": "ستظهر قسائم الراتب المنشأة في ERPNext هنا تلقائياً.",
+  "noPayrollEntriesYet": "لا توجد إدخالات رواتب بعد",
+  "payrollEntriesAppearAutomatically": "ستظهر إدخالات الرواتب المنشأة في ERPNext هنا تلقائياً.",
+  "netPay": "صافي الراتب: {amount}",
+  "@netPay": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "payrollEntry": "إدخال الرواتب",
+  "unknown": "غير معروف",
+  "generateInvoice": "إنشاء فاتورة",
+  "invoiceItemsSection": "عناصر الفاتورة",
+  "noOrderItems": "لا توجد عناصر",
+  "thisOrderHasNoItems": "هذا الطلب لا يحتوي على عناصر.",
+  "customerLabel2": "العميل",
+  "dateLabel": "التاريخ",
+  "itemsCountLabel": "العناصر",
+  "somethingWentWrong": "حدث خطأ ما",
+  "allInvoices": "كل الفواتير",
+  "refresh": "تحديث",
+  "reject": "رفض",
+  "approve": "موافقة",
+  "newRequest": "طلب جديد",
+  "noPermission": "ليس لديك صلاحية لعرض هذه الصفحة",
+  "sales": "مبيعات",
+  "hr": "موارد بشرية",
+  "createPayrollEntryTitle": "إنشاء قيد راتب",
+  "addEmployee": "إضافة موظف",
+  "statusLabel": "الحالة",
+  "qtyLabel": "الكمية",
+  "amountLabel": "المبلغ",
+  "leaveRequests": "طلبات الإجازة",
+  "stockEntryCreated": "تم إنشاء إدخال المخزون {name} بنجاح",
+  "@stockEntryCreated": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "warehouse": "المستودع"
+}

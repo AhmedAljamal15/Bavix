@@ -1,0 +1,508 @@
+{
+  "@@locale": "en",
+  "appTitle": "Smartel ERP",
+  "profile": "Profile",
+  "logout": "Logout",
+  "customers": "Customers",
+  "items": "Items",
+  "salesOrders": "Sales Orders",
+  "salesInvoices": "Sales Invoices",
+  "deliveryNotes": "Delivery Notes",
+  "createAccount": "Create Account",
+  "requestAccess": "Request Access",
+  "signIn": "Sign In",
+  "email": "Email",
+  "password": "Password",
+  "fullName": "Full Name",
+  "userType": "User Type",
+  "roles": "Roles",
+  "appearance": "Appearance",
+  "language": "Language",
+  "lightMode": "Light Mode",
+  "darkMode": "Dark Mode",
+  "followSystem": "Follow System",
+  "adminDashboard": "Admin Dashboard",
+  "salesDashboard": "Sales Dashboard",
+  "customerDashboard": "Customer Dashboard",
+  "hrDashboard": "HR Dashboard",
+  "accountInformation": "Account Information",
+  "appSettings": "App Settings",
+  "noCustomersFound": "No customers found",
+  "noItemsFound": "No items found",
+  "noSalesInvoicesFound": "No sales invoices found",
+  "noDeliveryNotesFound": "No delivery notes found",
+  "noOrdersFound": "No orders found",
+  "erpSalesDashboard": "ERP Sales Dashboard",
+  "welcomeBack": "Welcome Back",
+  "signInToContinue": "Sign in to continue to your ERP system",
+  "requestAccessButton": "Request Access",
+  "createCustomerAccount": "Create Customer Account",
+  "welcomeToYourErp": "Welcome to Your ERP",
+  "manageYourSalesEfficiently": "Manage your sales operations efficiently. Track items, customers, orders, and invoices all in one place.",
+  "manageItems": "Manage Items",
+  "trackProductsAndInventory": "Track products & inventory",
+  "manageCustomers": "Manage Customers",
+  "organizeClientInformation": "Organize client information",
+  "trackOrders": "Track Orders",
+  "monitorSalesAndDelivery": "Monitor sales & delivery",
+  "getStarted": "Get Started",
+  "allRoles": "All Roles",
+  "basicAccess": "Basic Access",
+  "viewAllRoles": "View All Roles",
+  "chooseAppearance": "Choose Appearance",
+  "english": "English",
+  "arabic": "العربية",
+  "noUsersFound": "No users found",
+  "adminDashboardTitle": "Admin Dashboard",
+  "controlCenter": "Control Center",
+  "monitorUsersCustomersProductsOrdersInvoicesAndDeliveries": "Monitor users, customers, products, orders, invoices, and deliveries",
+  "users": "Users",
+  "userOverview": "User Overview",
+  "enabledUsers": "Enabled Users",
+  "systemUsers": "System Users",
+  "websiteUsers": "Website Users",
+  "businessSnapshot": "Business Snapshot",
+  "totalInvoiceValue": "Total Invoice Value",
+  "quickAccess": "Quick Access",
+  "salesDashboardTitle": "Sales Dashboard",
+  "salesOperations": "Sales Operations",
+  "manageCustomersProductsOrdersDeliveriesAndInvoices": "Manage customers, products, orders, deliveries, and invoices",
+  "productCatalog": "Product Catalog",
+  "clientDirectory": "Client Directory",
+  "orderManagement": "Order Management",
+  "shipmentTracking": "Shipment Tracking",
+  "hrDashboardTitle": "HR Dashboard",
+  "humanResources": "Human Resources",
+  "manageUserAccessAndReviewWorkforceAccounts": "Manage user access and review workforce accounts",
+  "totalUsers": "Total Users",
+  "enabled": "Enabled",
+  "recentUsers": "Recent Users",
+  "customerDashboardTitle": "Customer Dashboard",
+  "welcomeUser": "Welcome, {name}",
+  "@welcomeUser": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "noLinkedCustomerProfileFound": "No linked customer profile found for this account",
+  "trackYourOrdersInvoicesAndDeliveries": "Track your orders, invoices, and deliveries",
+  "recentOrders": "Recent Orders",
+  "recentInvoices": "Recent Invoices",
+  "recentDeliveryNotes": "Recent Delivery Notes",
+  "login": "Login",
+  "addCustomer": "Add Customer",
+  "add": "Add",
+  "type": "Type",
+  "group": "Group",
+  "territory": "Territory",
+  "notSet": "Not set",
+  "accountInformationSection": "Account Information",
+  "appSettingsSection": "App Settings",
+  "createCustomerAccountTitle": "Create Customer Account",
+  "customerName": "Customer Name",
+  "enterCustomerName": "Enter customer name",
+  "enterCustomerEmail": "Enter customer email",
+  "customerType": "Customer Type",
+  "individual": "Individual",
+  "company": "Company",
+  "createCustomerButton": "Create Customer",
+  "customerCreatedSuccessfully": "Customer created successfully!",
+  "customerNameIsRequired": "Customer name is required",
+  "customerNameMustBeAtLeast2Characters": "Customer name must be at least 2 characters",
+  "emailIsRequired": "Email is required",
+  "enterValidEmail": "Enter a valid email",
+  "errorInitializingApp": "Error initializing app: {error}",
+  "@errorInitializingApp": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "itemCode": "Item Code",
+  "enterItemCode": "Enter item code",
+  "itemName": "Item Name",
+  "enterItemName": "Enter item name",
+  "itemGroup": "Item Group",
+  "enterItemGroup": "Enter item group",
+  "stockUom": "Stock UOM",
+  "enterStockUom": "Enter stock UOM",
+  "countryOfOrigin": "Country of Origin",
+  "enterCountryOfOrigin": "Enter country of origin",
+  "isStockItem": "Is Stock Item",
+  "isSalesItem": "Is Sales Item",
+  "createItem": "Create Item",
+  "itemCreatedSuccessfully": "Item created successfully!",
+  "fieldIsRequired": "{label} is required",
+  "@fieldIsRequired": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "fieldMustBeAtLeast2Characters": "{label} must be at least 2 characters",
+  "@fieldMustBeAtLeast2Characters": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "itemDetailsTitle": "Item Details",
+  "basicInformation": "Basic Information",
+  "pricingAndRates": "Pricing & Rates",
+  "statusAndFlags": "Status & Flags",
+  "standardRate": "Standard Rate",
+  "yes": "Yes",
+  "no": "No",
+  "salesItem": "Sales Item",
+  "status": "Status",
+  "active": "Active",
+  "disabled": "Disabled",
+  "addItem": "Add Item",
+  "createStockEntry": "Create Stock Entry",
+  "uom": "UOM",
+  "rate": "Rate",
+  "stockItem": "Stock Item",
+  "notStockItem": "Not Stock Item",
+  "notSalesItem": "Not Sales Item",
+  "code": "Code",
+  "createItemTitle": "Create Item",
+  "createStockEntryTitle": "Create Stock Entry",
+  "item": "Item",
+  "targetWarehouse": "Target Warehouse",
+  "quantity": "Quantity",
+  "basicRate": "Basic Rate",
+  "createStockEntryButton": "Create Stock Entry",
+  "pleaseSelectAnItem": "Please select an item",
+  "pleaseSelectAWarehouse": "Please select a warehouse",
+  "pleaseEnterValidQuantity": "Please enter valid quantity",
+  "pleaseEnterValidBasicRate": "Please enter valid basic rate",
+  "stockEntrySubmitted": "Stock Entry submitted: {name}",
+  "@stockEntrySubmitted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "salesOrdersTitle": "Sales Orders",
+  "orderItems": "Order Items",
+  "customer": "Customer",
+  "@customer": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "date": "Date: {date}",
+  "@date": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "delivery": "Delivery: {date}",
+  "@delivery": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "total": "Total: {amount}",
+  "@total": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "draft": "Draft",
+  "submitted": "Submitted",
+  "completed": "Completed",
+  "cancelled": "Cancelled",
+  "orderDetailsTitle": "Order Details",
+  "deliveryDate": "Delivery Date",
+  "currency": "Currency",
+  "orderSummary": "Order Summary",
+  "totalQty": "Total Qty",
+  "grandTotal": "Grand Total",
+  "billingStatus": "Billing Status",
+  "deliveryStatus": "Delivery Status",
+  "createDeliveryNote": "Create Delivery Note",
+  "viewSalesInvoice": "View Sales Invoice",
+  "submitDeliveryNote": "Submit: {name}",
+  "@submitDeliveryNote": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryNoteDraftCreated": "Delivery Note draft created: {name}",
+  "@deliveryNoteDraftCreated": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryNoteSubmittedSuccessfully": "Delivery Note submitted successfully",
+  "salesInvoicesTitle": "Sales Invoices",
+  "postingDate": "Posting Date: {date}",
+  "@postingDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "grandTotalAmount": "Grand Total: {amount} {currency}",
+  "@grandTotalAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "paid": "Paid",
+  "unpaid": "Unpaid",
+  "overdue": "Overdue",
+  "invoiceTitle": "Invoice - {orderId}",
+  "@invoiceTitle": {
+    "placeholders": {
+      "orderId": {
+        "type": "String"
+      }
+    }
+  },
+  "invoiceDetailsTitle": "Invoice Details",
+  "invoiceItems": "Invoice Items",
+  "noItemsFoundInInvoice": "No items found",
+  "invoiceCustomer": "Customer: {name}",
+  "@invoiceCustomer": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "invoiceStatus": "Status: {status}",
+  "@invoiceStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "invoiceCompany": "Company: {name}",
+  "@invoiceCompany": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "invoiceCurrency": "Currency: {currency}",
+  "@invoiceCurrency": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "invoiceTotalQty": "Total Qty: {qty}",
+  "@invoiceTotalQty": {
+    "placeholders": {
+      "qty": {
+        "type": "int"
+      }
+    }
+  },
+  "invoiceGrandTotal": "Grand Total: {amount}",
+  "@invoiceGrandTotal": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryNotesTitle": "Delivery Notes",
+  "deliveryNoteItems": "Items",
+  "deliveryNoteStatus": "Status: {status}",
+  "@deliveryNoteStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "toBill": "To Bill",
+  "registrationSuccessful": "Account created successfully. Please check your email to complete registration and set your password.",
+  "fullNameIsRequired": "Full name is required",
+  "enterValidFullName": "Enter a valid full name",
+  "passwordIsRequired": "Password is required",
+  "passwordMustBeAtLeast6Characters": "Password must be at least 6 characters",
+  "pleaseConfirmPassword": "Please confirm password",
+  "passwordsDoNotMatch": "Passwords do not match",
+  "afterRegistrationCheckYourEmailToCompleteAccountSetup": "After registration, check your email to complete account setup.",
+  "requestAccessTitle": "Request Access",
+  "requestedRole": "Requested Role",
+  "whyDoYouNeedAccess": "Why do you need access?",
+  "submitRequest": "Submit Request",
+  "accessRequestSubmitted": "Access request submitted: {leadName}",
+  "@accessRequestSubmitted": {
+    "placeholders": {
+      "leadName": {
+        "type": "String"
+      }
+    }
+  },
+  "hrPanel": "HR Panel",
+  "salesPanel": "Sales Panel",
+  "orders": "Orders",
+  "invoices": "Invoices",
+  "customerLabel": "Customer",
+  "ordersLabel": "Orders",
+  "noRecentOrders": "No orders found",
+  "noRecentInvoices": "No invoices found",
+  "noRecentDeliveryNotes": "No delivery notes found",
+  "orderControlCenter": "Order Control Center",
+  "trackOrdersDescription": "Track customer orders, delivery dates, totals, and document status.",
+  "ordersLoaded": "{count} orders loaded",
+  "@ordersLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noSalesOrdersFound": "No sales orders found",
+  "salesOrdersWillAppearHere": "Sales orders will appear here once created.",
+  "noMatchingOrders": "No matching orders",
+  "trySearchingOrders": "Try searching with another order, customer, or status.",
+  "searchOrders": "Search orders...",
+  "totalLabel": "Total",
+  "productControlCenter": "Product Control Center",
+  "manageProductCatalogDescription": "Manage your product catalog, stock items, rates, and sales availability.",
+  "itemsLoaded": "{count} items loaded",
+  "@itemsLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noMatchingItems": "No matching items",
+  "trySearchingItems": "Try searching with another item name, code, group, or UOM.",
+  "createFirstItem": "Create your first item to start managing products.",
+  "searchItems": "Search items...",
+  "groupLabel": "Group",
+  "rateLabel": "Rate",
+  "typeLabel": "Type",
+  "stockLabel": "Stock",
+  "nonStock": "Non-stock",
+  "notStock": "Not Stock",
+  "notSales": "Not Sales",
+  "inventoryDashboard": "Inventory Dashboard",
+  "stockControlCenter": "Stock Control Center",
+  "trackInventoryDescription": "Track products, warehouses and stock movements in one place.",
+  "warehouses": "Warehouses",
+  "lowStock": "Low Stock",
+  "outOfStock": "Out of Stock",
+  "quickActions": "Quick Actions",
+  "createItemAction": "Create Item",
+  "addNewProduct": "Add new product",
+  "stockEntryAction": "Stock Entry",
+  "receiveIssueStock": "Receive / issue stock",
+  "itemsList": "Items List",
+  "openProducts": "Open products",
+  "stockByWarehouse": "Stock by Warehouse",
+  "totalQuantity": "Total quantity",
+  "noWarehouseStockFound": "No warehouse stock data found",
+  "lowStockItems": "Low Stock Items",
+  "noLowStockFound": "No low stock items found",
+  "recentStockMovements": "Recent Stock Movements",
+  "noStockMovementsFound": "No stock movements found",
+  "attendance": "Attendance",
+  "attendanceManagement": "Attendance Management",
+  "trackAttendanceDescription": "Track daily employee attendance, absence, half days and leave status.",
+  "attendanceRecordsLoaded": "{count} attendance records loaded",
+  "@attendanceRecordsLoaded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "newAttendance": "New Attendance",
+  "present": "Present",
+  "absent": "Absent",
+  "halfDay": "Half Day",
+  "onLeave": "On Leave",
+  "searchAttendance": "Search attendance...",
+  "noAttendanceFound": "No attendance records found",
+  "createAttendanceOrFilter": "Create a new attendance record or change your filter.",
+  "employee": "Employee",
+  "retry": "Retry",
+  "payroll": "Payroll",
+  "payrollManagement": "Payroll Management",
+  "trackPayrollDescription": "Track salary slips and payroll entries from ERPNext.",
+  "salarySlips": "Salary Slips",
+  "payrollEntries": "Payroll Entries",
+  "newEntry": "New Entry",
+  "noSalarySlipsYet": "No salary slips yet",
+  "salarySlipsAppearAutomatically": "Salary slips created in ERPNext will appear here automatically.",
+  "noPayrollEntriesYet": "No payroll entries yet",
+  "payrollEntriesAppearAutomatically": "Payroll entries created in ERPNext will appear here automatically.",
+  "netPay": "Net Pay: {amount}",
+  "@netPay": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "payrollEntry": "Payroll Entry",
+  "unknown": "Unknown",
+  "generateInvoice": "Generate Invoice",
+  "invoiceItemsSection": "Invoice Items",
+  "noOrderItems": "No items found",
+  "thisOrderHasNoItems": "This order has no items.",
+  "customerLabel2": "Customer",
+  "dateLabel": "Date",
+  "itemsCountLabel": "Items",
+  "somethingWentWrong": "Something went wrong",
+  "allInvoices": "All invoices",
+  "refresh": "Refresh",
+  "reject": "Reject",
+  "approve": "Approve",
+  "newRequest": "New Request",
+  "noPermission": "You do not have permission to view this page",
+  "sales": "Sales",
+  "hr": "HR",
+  "createPayrollEntryTitle": "Create Payroll Entry",
+  "addEmployee": "Add Employee",
+  "statusLabel": "Status",
+  "qtyLabel": "Qty",
+  "amountLabel": "Amount",
+  "leaveRequests": "Leave Requests",
+  "stockEntryCreated": "Stock Entry {name} created successfully",
+  "@stockEntryCreated": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "warehouse": "Warehouse"
+}

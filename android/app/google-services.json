@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "734538137018",
+    "project_id": "babylon-login-7e3fa",
+    "storage_bucket": "babylon-login-7e3fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734538137018:android:6758c48df64a7a92e2f183",
+        "android_client_info": {
+          "package_name": "com.example.babylon_login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSa43MZcQmMJOruMYV_MVBW4vZndHa2MM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734538137018:android:c6e0b1fa85fe3864e2f183",
+        "android_client_info": {
+          "package_name": "com.example.erp_sales"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSa43MZcQmMJOruMYV_MVBW4vZndHa2MM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

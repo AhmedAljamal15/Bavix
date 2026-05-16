@@ -1,0 +1,77 @@
+# Miscellaneous
+
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+Thumbs.db
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ / Android Studio
+
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code
+
+#.vscode/
+
+# Flutter / Dart / Pub
+
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Generated
+
+.generated/
+.flutter-plugins
+.packages
+
+# Symbolication related
+
+app.*.symbols
+
+# Obfuscation related
+
+app.*.map.json
+
+# Android build folders
+
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Environment & Secrets
+
+.env
+
+# Temporary scripts & debug files
+
+fix_*.dart
+add_*.dart
+replace_texts.dart
+restore_l10n.dart
+view_context.dart
+bulk_localize.dart
+refactor.py
+
+# Analysis / generated text files
+
+broken_files.txt
+analyze_output.txt
