@@ -39,24 +39,6 @@ The centerpiece feature is **Bavix AI**, a conversational ERP copilot powered by
 
 ---
 
-## 📸 Screenshots
-
-> _Screenshots will be added here after captures. Use the placeholders below._
-
-| Splash / Onboarding | Login | Admin Dashboard |
-|:---:|:---:|:---:|
-| ![Splash](screenshots/splash.png) | ![Login](screenshots/login.png) | ![Admin](screenshots/admin_home.png) |
-
-| Sales Orders | Inventory Dashboard | Bavix AI Chat |
-|:---:|:---:|:---:|
-| ![Sales](screenshots/sales_orders.png) | ![Inventory](screenshots/inventory.png) | ![AI](screenshots/ai_assistant.png) |
-
-| HR Module | Customer Portal | Profile |
-|:---:|:---:|:---:|
-| ![HR](screenshots/hr_home.png) | ![Customer](screenshots/customer_home.png) | ![Profile](screenshots/profile.png) |
-
----
-
 ## ✨ Key Features
 
 - 🔐 Session-based authentication with ERPNext (cookie auth + CSRF protection)
@@ -336,21 +318,6 @@ flutter run
 
 ---
 
-## 🔐 Environment Variables
-
-Create a `.env` file in the project root. This file is loaded by `flutter_dotenv` at startup.
-
-```env
-# Your ERPNext / Frappe backend base URL
-ERP_BASE_URL=<YOUR_ERP_BASE_URL>
-
-# Add any additional configuration your deployment requires
-```
-
-> ⚠️ **Never commit your `.env` file.** It is included in `.gitignore`. Keep all secrets out of version control.
-
----
-
 ## 🔥 Firebase Setup Notes
 
 1. Create a project in the [Firebase Console](https://console.firebase.google.com).
@@ -368,7 +335,6 @@ ERP_BASE_URL=<YOUR_ERP_BASE_URL>
 
 - All authentication is handled via ERPNext's built-in session mechanism (HTTP-only cookies).
 - CSRF tokens are automatically captured and forwarded on every mutating request.
-- Sensitive credentials (base URL, API keys) are loaded from a local `.env` file that is excluded from version control.
 - The Firebase config file (`firebase_options.dart`) contains only public project identifiers — no service account keys.
 - No user credentials are stored in plaintext. Session state is managed via secure cookie persistence.
 
