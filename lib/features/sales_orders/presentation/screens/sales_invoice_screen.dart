@@ -7,6 +7,12 @@ import 'package:erp_sales/l10n/app_localizations.dart';
 import '../cubit/sales_invoice_cubit.dart';
 import 'sales_invoice_view.dart';
 import 'package:erp_sales/core/helpers/app_toast.dart';
+import '../widgets/invoice_hero_header.dart';
+import '../widgets/invoice_stats_grid.dart';
+import '../widgets/invoice_mini_stat_card.dart';
+import '../widgets/invoice_section_title.dart';
+import '../widgets/invoice_item_card.dart';
+import '../widgets/invoice_empty_box.dart';
 
 class SalesInvoicesScreen extends StatelessWidget {
   final SalesInvoicesListRepository salesInvoicesListRepository;
@@ -74,7 +80,6 @@ class CreateSalesInvoiceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
     final primary = _primaryColor();
     final l10n = AppLocalizations.of(context)!;
 
@@ -91,7 +96,7 @@ class CreateSalesInvoiceScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.zero,
         children: [
-          _InvoiceHeroHeader(
+          InvoiceHeroHeader(
             orderId: order.name,
             onBack: () => Navigator.pop(context),
           ),
@@ -99,27 +104,27 @@ class CreateSalesInvoiceScreen extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(18, 18, 18, 100),
             child: Column(
               children: [
-                _StatsGrid(
+                InvoiceStatsGrid(
                   children: [
-                    _MiniStatCard(
+                    InvoiceMiniStatCard(
                       title: l10n.customerLabel2,
                       value: order.customerName ?? '-',
                       icon: Icons.person_outline,
                       color: const Color(0xFF2ECC71),
                     ),
-                    _MiniStatCard(
+                    InvoiceMiniStatCard(
                       title: l10n.dateLabel,
                       value: order.transactionDate ?? '-',
                       icon: Icons.event_outlined,
                       color: const Color(0xFF42A5F5),
                     ),
-                    _MiniStatCard(
+                    InvoiceMiniStatCard(
                       title: l10n.itemsCountLabel,
                       value: _itemsCount().toString(),
                       icon: Icons.inventory_2_outlined,
                       color: const Color(0xFFF39C12),
                     ),
-                    _MiniStatCard(
+                    InvoiceMiniStatCard(
                       title: l10n.totalLabel,
                       value: '${order.grandTotal}',
                       icon: Icons.payments_outlined,
@@ -128,7 +133,7 @@ class CreateSalesInvoiceScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 22),
-                _SectionTitle(
+                InvoiceSectionTitle(
                   icon: Icons.list_alt_outlined,
                   title: l10n.invoiceItemsSection,
                 ),
@@ -139,7 +144,7 @@ class CreateSalesInvoiceScreen extends StatelessWidget {
                     final rate = item.rate ?? 0;
                     final amount = item.amount ?? 0;
 
-                    return _InvoiceItemCard(
+                    return InvoiceItemCard(
                       name: item.itemName ?? 'N/A',
                       code: item.itemCode ?? 'N/A',
                       qty: qty.toString(),
@@ -149,294 +154,12 @@ class CreateSalesInvoiceScreen extends StatelessWidget {
                     );
                   }).toList())
                 else
-                  _EmptyBox(
+                  InvoiceEmptyBox(
                     icon: Icons.inventory_2_outlined,
                     title: l10n.noOrderItems,
                     subtitle: l10n.thisOrderHasNoItems,
                   ),
               ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _InvoiceHeroHeader extends StatelessWidget {
-  final String orderId;
-  final VoidCallback onBack;
-
-  const _InvoiceHeroHeader({required this.orderId, required this.onBack});
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      padding: const EdgeInsets.fromLTRB(18, 48, 18, 30),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: isDark
-              ? [
-                  const Color(0xFF020617),
-                  const Color(0xFF25103D),
-                  const Color(0xFF111827),
-                ]
-              : [const Color(0xFFF8F0FF), Colors.white],
-        ),
-        borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(34),
-          bottomRight: Radius.circular(34),
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              IconButton(
-                onPressed: onBack,
-                icon: const Icon(Icons.arrow_back_ios_new_rounded),
-              ),
-              const Expanded(
-                child: Text(
-                  'Create Invoice',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900),
-                ),
-              ),
-              const SizedBox(width: 48),
-            ],
-          ),
-          const SizedBox(height: 24),
-          const Text(
-            'Sales Invoice Builder',
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Generate invoice from order $orderId',
-            style: TextStyle(
-              fontSize: 14,
-              color: isDark ? Colors.white70 : Colors.black54,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _StatsGrid extends StatelessWidget {
-  final List<Widget> children;
-
-  const _StatsGrid({required this.children});
-
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, c) {
-        final width = (c.maxWidth - 10) / 2;
-
-        return Wrap(
-          spacing: 10,
-          runSpacing: 10,
-          children: children
-              .map((e) => SizedBox(width: width, child: e))
-              .toList(),
-        );
-      },
-    );
-  }
-}
-
-class _MiniStatCard extends StatelessWidget {
-  final String title;
-  final String value;
-  final IconData icon;
-  final Color color;
-
-  const _MiniStatCard({
-    required this.title,
-    required this.value,
-    required this.icon,
-    required this.color,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final dark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      height: 110,
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(22),
-        color: dark ? const Color(0xFF101A35) : Colors.white,
-        border: Border.all(color: color.withValues(alpha: .18)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(icon, color: color),
-          const Spacer(),
-          Text(
-            value,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16),
-          ),
-          const SizedBox(height: 4),
-          Text(title, style: const TextStyle(fontSize: 11)),
-        ],
-      ),
-    );
-  }
-}
-
-class _SectionTitle extends StatelessWidget {
-  final IconData icon;
-  final String title;
-
-  const _SectionTitle({required this.icon, required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(icon),
-        const SizedBox(width: 8),
-        Text(
-          title,
-          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
-        ),
-      ],
-    );
-  }
-}
-
-class _InvoiceItemCard extends StatelessWidget {
-  final String name;
-  final String code;
-  final String qty;
-  final String uom;
-  final String rate;
-  final String amount;
-
-  const _InvoiceItemCard({
-    required this.name,
-    required this.code,
-    required this.qty,
-    required this.uom,
-    required this.rate,
-    required this.amount,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final dark = Theme.of(context).brightness == Brightness.dark;
-    final l10n = AppLocalizations.of(context)!;
-
-    return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(22),
-        color: dark ? const Color(0xFF101A35) : Colors.white,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            name,
-            style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 15),
-          ),
-          const SizedBox(height: 6),
-          Text(code, style: const TextStyle(fontSize: 12)),
-          const SizedBox(height: 14),
-          Row(
-            children: [
-              Expanded(child: Text('${l10n.qtyLabel}: $qty $uom')),
-              Expanded(child: Text('${l10n.rateLabel}: $rate')),
-              Expanded(
-                child: Text(
-                  '${l10n.amountLabel}: $amount',
-                  textAlign: TextAlign.right,
-                  style: const TextStyle(fontWeight: FontWeight.w800),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _EmptyBox extends StatelessWidget {
-  final IconData icon;
-  final String title;
-  final String subtitle;
-
-  const _EmptyBox({
-    required this.icon,
-    required this.title,
-    required this.subtitle,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(28),
-      child: Column(
-        children: [
-          Icon(icon, size: 54),
-          const SizedBox(height: 12),
-          Text(
-            title,
-            style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 18),
-          ),
-          const SizedBox(height: 6),
-          Text(subtitle),
-        ],
-      ),
-    );
-  }
-}
-
-class _DetailRow extends StatelessWidget {
-  final String label;
-  final String value;
-
-  const _DetailRow({required this.label, required this.value});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            label,
-            style: TextStyle(
-              fontSize: 12,
-              color: Colors.grey.shade600,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-          Expanded(
-            child: Text(
-              value,
-              textAlign: TextAlign.right,
-              style: const TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w600,
-                color: Color(0xFF2C3E50),
-              ),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],

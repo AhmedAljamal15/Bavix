@@ -8,12 +8,19 @@ import 'package:erp_sales/features/items/data/repo/item_details_repository.dart'
 import 'package:erp_sales/features/items/data/repo/items_repository.dart';
 import 'package:erp_sales/features/items/data/repo/stock_entries_repository.dart';
 import 'package:erp_sales/features/items/data/repo/warehouse_repository.dart';
-import 'package:erp_sales/features/items/presentation/items_cubit.dart';
-import 'package:erp_sales/features/items/presentation/items_state.dart';
+import 'package:erp_sales/features/items/presentation/cubit/items_cubit.dart';
+import 'package:erp_sales/features/items/presentation/cubit/items_state.dart';
 import 'package:erp_sales/features/items/presentation/screens/create_item_screen.dart';
 import 'package:erp_sales/features/items/presentation/screens/create_stock_entry_screen.dart';
 import 'package:erp_sales/features/items/presentation/screens/items_screen.dart';
 import 'package:erp_sales/l10n/app_localizations.dart';
+import '../widgets/inventory_hero_header.dart';
+import '../widgets/responsive_grid.dart';
+import '../widgets/metric_card.dart';
+import '../widgets/section_card.dart';
+import '../widgets/action_card.dart';
+import '../widgets/activity_tile.dart';
+import '../widgets/dashboard_empty_state.dart';
 
 class InventoryDashboardScreen extends StatefulWidget {
   const InventoryDashboardScreen({super.key});
@@ -189,7 +196,7 @@ class _InventoryBody extends StatelessWidget {
         return ListView(
           padding: EdgeInsets.zero,
           children: [
-            const _InventoryHeroHeader(),
+            const InventoryHeroHeader(),
             Center(
               child: ConstrainedBox(
                 constraints: BoxConstraints(maxWidth: maxWidth),
@@ -198,27 +205,27 @@ class _InventoryBody extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      _ResponsiveGrid(
+                      ResponsiveGrid(
                         children: [
-                          _MetricCard(
+                          MetricCard(
                             title: l10n.items,
                             value: items.length.toString(),
                             icon: Icons.inventory_2_outlined,
                             color: const Color(0xFF42A5F5),
                           ),
-                          _MetricCard(
+                          MetricCard(
                             title: l10n.warehouses,
                             value: warehouses.length.toString(),
                             icon: Icons.warehouse_outlined,
                             color: const Color(0xFF16A085),
                           ),
-                          _MetricCard(
+                          MetricCard(
                             title: l10n.lowStock,
                             value: lowStockItems.length.toString(),
                             icon: Icons.warning_amber_outlined,
                             color: const Color(0xFFF39C12),
                           ),
-                          _MetricCard(
+                          MetricCard(
                             title: l10n.outOfStock,
                             value: outOfStockItems.length.toString(),
                             icon: Icons.remove_shopping_cart_outlined,
@@ -227,11 +234,11 @@ class _InventoryBody extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 18),
-                      _Section(
+                      SectionCard(
                         title: l10n.quickActions,
-                        child: _ResponsiveActions(
+                        child: ResponsiveActions(
                           children: [
-                            _ActionCard(
+                            ActionCard(
                               title: l10n.createItemAction,
                               subtitle: l10n.addNewProduct,
                               icon: Icons.add_box_outlined,
@@ -252,7 +259,7 @@ class _InventoryBody extends StatelessWidget {
                                 }
                               },
                             ),
-                            _ActionCard(
+                            ActionCard(
                               title: l10n.stockEntryAction,
                               subtitle: l10n.receiveIssueStock,
                               icon: Icons.inventory_outlined,
@@ -276,7 +283,7 @@ class _InventoryBody extends StatelessWidget {
                                 }
                               },
                             ),
-                            _ActionCard(
+                            ActionCard(
                               title: l10n.itemsList,
                               subtitle: l10n.openProducts,
                               icon: Icons.list_alt_outlined,
@@ -298,15 +305,15 @@ class _InventoryBody extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 18),
-                      _Section(
+                      SectionCard(
                         title: l10n.stockByWarehouse,
                         child: warehouseEntries.isEmpty
-                            ? _EmptyState(
+                            ? DashboardEmptyState(
                                 message: l10n.noWarehouseStockFound,
                               )
                             : Column(
                                 children: warehouseEntries.take(6).map((entry) {
-                                  return _ActivityTile(
+                                  return ActivityTile(
                                     icon: Icons.warehouse_outlined,
                                     title: entry.key,
                                     subtitle: l10n.totalQuantity,
@@ -317,10 +324,10 @@ class _InventoryBody extends StatelessWidget {
                               ),
                       ),
                       const SizedBox(height: 18),
-                      _Section(
+                      SectionCard(
                         title: l10n.lowStockItems,
                         child: lowStockItems.isEmpty
-                            ? _EmptyState(
+                            ? DashboardEmptyState(
                                 message: l10n.noLowStockFound,
                               )
                             : Column(
@@ -329,7 +336,7 @@ class _InventoryBody extends StatelessWidget {
                                       .toString();
                                   final qty = itemStockMap[itemCode] ?? 0;
 
-                                  return _ActivityTile(
+                                  return ActivityTile(
                                     icon: Icons.warning_amber_outlined,
                                     title: item.itemName ?? itemCode,
                                     subtitle: itemCode,
@@ -340,10 +347,10 @@ class _InventoryBody extends StatelessWidget {
                               ),
                       ),
                       const SizedBox(height: 18),
-                      _Section(
+                      SectionCard(
                         title: l10n.recentStockMovements,
                         child: stockEntries.isEmpty
-                            ? _EmptyState(
+                            ? DashboardEmptyState(
                                 message: l10n.noStockMovementsFound,
                               )
                             : Column(
@@ -352,7 +359,7 @@ class _InventoryBody extends StatelessWidget {
                                       ? entry.totalIncomingValue
                                       : entry.totalOutgoingValue;
 
-                                  return _ActivityTile(
+                                  return ActivityTile(
                                     icon: Icons.swap_vert_circle_outlined,
                                     title: entry.stockEntryType,
                                     subtitle:
@@ -371,403 +378,6 @@ class _InventoryBody extends StatelessWidget {
           ],
         );
       },
-    );
-  }
-}
-
-class _InventoryHeroHeader extends StatelessWidget {
-  const _InventoryHeroHeader();
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final l10n = AppLocalizations.of(context)!;
-
-    return Container(
-      padding: const EdgeInsets.fromLTRB(20, 48, 20, 34),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: isDark
-              ? [
-                  const Color(0xFF020617),
-                  const Color(0xFF062B33),
-                  const Color(0xFF0B3B4A),
-                ]
-              : [const Color(0xFFEFFFFA), Colors.white],
-        ),
-        borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(34),
-          bottomRight: Radius.circular(34),
-        ),
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 28,
-            offset: const Offset(0, 16),
-            color: Colors.black.withValues(alpha: .12),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              IconButton(
-                onPressed: () => Navigator.pop(context),
-                icon: const Icon(Icons.arrow_back_ios_new_rounded),
-              ),
-              const Icon(Icons.warehouse_outlined, color: Color(0xFF16A085)),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  l10n.inventoryDashboard,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w900,
-                    color: isDark ? Colors.white : const Color(0xFF111827),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 48),
-            ],
-          ),
-          const SizedBox(height: 28),
-          Text(
-            l10n.stockControlCenter,
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.w900,
-              color: isDark ? Colors.white : const Color(0xFF111827),
-            ),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            l10n.trackInventoryDescription,
-            style: TextStyle(
-              fontSize: 14,
-              height: 1.5,
-              color: isDark ? Colors.white70 : Colors.black54,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _ResponsiveGrid extends StatelessWidget {
-  final List<Widget> children;
-
-  const _ResponsiveGrid({required this.children});
-
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        final columns = constraints.maxWidth >= 650 ? 4 : 2;
-        const spacing = 14.0;
-        final width =
-            (constraints.maxWidth - spacing * (columns - 1)) / columns;
-
-        return Wrap(
-          spacing: spacing,
-          runSpacing: spacing,
-          children: children
-              .map((child) => SizedBox(width: width, child: child))
-              .toList(),
-        );
-      },
-    );
-  }
-}
-
-class _ResponsiveActions extends StatelessWidget {
-  final List<Widget> children;
-
-  const _ResponsiveActions({required this.children});
-
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        final columns = constraints.maxWidth >= 700 ? 3 : 2;
-        const spacing = 12.0;
-        final width =
-            (constraints.maxWidth - spacing * (columns - 1)) / columns;
-
-        return Wrap(
-          spacing: spacing,
-          runSpacing: spacing,
-          children: children
-              .map((child) => SizedBox(width: width, child: child))
-              .toList(),
-        );
-      },
-    );
-  }
-}
-
-class _MetricCard extends StatelessWidget {
-  final String title;
-  final String value;
-  final IconData icon;
-  final Color color;
-
-  const _MetricCard({
-    required this.title,
-    required this.value,
-    required this.icon,
-    required this.color,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      height: 145,
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(24),
-        color: isDark ? const Color(0xFF101A35) : Colors.white,
-        border: Border.all(color: color.withValues(alpha: .20)),
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 20,
-            offset: const Offset(0, 10),
-            color: Colors.black.withValues(alpha: isDark ? .18 : .06),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(icon, color: color, size: 28),
-          const Spacer(),
-          Text(
-            value,
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w900,
-              color: isDark ? Colors.white : const Color(0xFF111827),
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 12,
-              color: isDark ? Colors.white70 : Colors.black54,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _Section extends StatelessWidget {
-  final String title;
-  final Widget child;
-
-  const _Section({required this.title, required this.child});
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(26),
-        color: isDark ? const Color(0xFF101A35) : Colors.white,
-        border: Border.all(
-          color: isDark ? Colors.white.withValues(alpha: .08) : Colors.black12,
-        ),
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 20,
-            offset: const Offset(0, 10),
-            color: Colors.black.withValues(alpha: isDark ? .18 : .06),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.w800,
-              color: isDark ? Colors.white : const Color(0xFF111827),
-            ),
-          ),
-          const SizedBox(height: 14),
-          child,
-        ],
-      ),
-    );
-  }
-}
-
-class _ActionCard extends StatelessWidget {
-  final String title;
-  final String subtitle;
-  final IconData icon;
-  final Color color;
-  final VoidCallback onTap;
-
-  const _ActionCard({
-    required this.title,
-    required this.subtitle,
-    required this.icon,
-    required this.color,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        borderRadius: BorderRadius.circular(22),
-        onTap: onTap,
-        child: Container(
-          height: 138,
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(22),
-            gradient: LinearGradient(
-              colors: [
-                color.withValues(alpha: isDark ? .22 : .12),
-                isDark ? const Color(0xFF0B1228) : Colors.white,
-              ],
-            ),
-            border: Border.all(color: color.withValues(alpha: .22)),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(icon, color: color),
-              const Spacer(),
-              Text(
-                title,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  color: isDark ? Colors.white : const Color(0xFF111827),
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                subtitle,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontSize: 12,
-                  color: isDark ? Colors.white60 : Colors.black54,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _ActivityTile extends StatelessWidget {
-  final IconData icon;
-  final String title;
-  final String subtitle;
-  final String trailing;
-  final Color color;
-
-  const _ActivityTile({
-    required this.icon,
-    required this.title,
-    required this.subtitle,
-    required this.trailing,
-    required this.color,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Container(
-      margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(18),
-        color: isDark ? const Color(0xFF0B1228) : const Color(0xFFF7F8FC),
-      ),
-      child: Row(
-        children: [
-          Icon(icon, color: color),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w800,
-                    color: isDark ? Colors.white : const Color(0xFF111827),
-                  ),
-                ),
-                const SizedBox(height: 3),
-                Text(
-                  subtitle,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: isDark ? Colors.white60 : Colors.black54,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          if (trailing.isNotEmpty)
-            Text(
-              trailing,
-              style: TextStyle(fontWeight: FontWeight.w800, color: color),
-            ),
-        ],
-      ),
-    );
-  }
-}
-
-class _EmptyState extends StatelessWidget {
-  final String message;
-
-  const _EmptyState({required this.message});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 14),
-      child: Center(
-        child: Text(
-          message,
-          style: TextStyle(
-            color: Theme.of(context).brightness == Brightness.dark
-                ? Colors.white60
-                : Colors.black54,
-          ),
-        ),
-      ),
     );
   }
 }

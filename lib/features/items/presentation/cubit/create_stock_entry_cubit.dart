@@ -13,7 +13,9 @@ class CreateStockEntryCubit extends Cubit<CreateStockEntryState> {
     emit(const CreateStockEntryLoading());
 
     try {
-      final stockEntryName = await repository.createAndSubmitStockEntry(request);
+      final stockEntryName = await repository.createAndSubmitStockEntry(
+        request,
+      );
       emit(CreateStockEntrySuccess(stockEntryName));
     } catch (e) {
       emit(CreateStockEntryError(e.toString()));
